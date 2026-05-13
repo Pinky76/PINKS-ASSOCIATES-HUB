@@ -41,7 +41,7 @@ export default function AllLeads({ setActivePage }) {
     <div style={{ padding: '1.5rem 2rem' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
         <div>
-          <h1 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#F8FAFC', margin: 0, letterSpacing: '-0.02em' }}>All Leads</h1>
+          <h1 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#0F172A', margin: 0, letterSpacing: '-0.02em' }}>All Leads</h1>
           <p style={{ color: '#64748B', margin: '0.2rem 0 0', fontSize: '0.875rem' }}>
             {filtered.length} lead{filtered.length !== 1 ? 's' : ''} · {formatCurrency(totalCommission)} potential commission
           </p>
@@ -73,7 +73,7 @@ export default function AllLeads({ setActivePage }) {
       </div>
 
       {/* Table */}
-      <div style={{ background: '#141929', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', overflow: 'hidden' }}>
+      <div style={{ background: '#fff', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', overflow: 'hidden' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse' }}>
           <thead>
             <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
@@ -108,7 +108,7 @@ export default function AllLeads({ setActivePage }) {
                     </div>
                     {lead.email && <div style={{ fontSize: '0.75rem', color: '#475569' }}>{lead.email}</div>}
                   </td>
-                  <td style={{ padding: '0.875rem 1rem', fontSize: '0.875rem', color: '#94A3B8' }}>
+                  <td style={{ padding: '0.875rem 1rem', fontSize: '0.875rem', color: '#64748B' }}>
                     {lead.company_name || '—'}
                   </td>
                   <td style={{ padding: '0.875rem 1rem' }}>
@@ -165,8 +165,8 @@ export default function AllLeads({ setActivePage }) {
 }
 
 const inputStyle = {
-  background: '#141929', border: '1px solid rgba(255,255,255,0.1)',
-  borderRadius: '8px', color: '#F8FAFC', fontSize: '0.875rem',
+  background: '#fff', border: '1px solid #E2E8F0',
+  borderRadius: '8px', color: '#0F172A', fontSize: '0.875rem',
   padding: '0.625rem 0.875rem', outline: 'none',
   fontFamily: "'DM Sans', sans-serif"
 }
@@ -179,8 +179,8 @@ const primaryBtn = {
 }
 
 const secondaryBtn = {
-  background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
-  borderRadius: '8px', color: '#94A3B8', cursor: 'pointer',
+  background: 'rgba(255,255,255,0.05)', border: '1px solid #E2E8F0',
+  borderRadius: '8px', color: '#64748B', cursor: 'pointer',
   fontSize: '0.875rem', fontWeight: 500, padding: '0.625rem 1.25rem',
   fontFamily: "'DM Sans', sans-serif"
 }

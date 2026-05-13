@@ -15,25 +15,14 @@ export const PRODUCT_TYPES = {
   salary_sacrifice: { label: 'Salary Sacrifice', color: '#14B8A6', bg: '#F0FDFA', border: '#99F6E4' },
 }
 
-// Kanban pipeline stages
+// Kanban pipeline stages — matched to Pinks CRM
 export const PIPELINE_STAGES = [
-  { id: 'new_enquiry', label: 'New Enquiry' },
-  { id: 'contact_made', label: 'Contact Made' },
-  { id: 'fact_find', label: 'Fact Find' },
-  { id: 'proposal_sent', label: 'Proposal Sent' },
-  { id: 'lender_submitted', label: 'Lender Submitted' },
+  { id: 'enquiry', label: 'Enquiry' },
+  { id: 'qualified', label: 'Qualified' },
+  { id: 'submitted', label: 'Submitted' },
   { id: 'approved', label: 'Approved' },
-  { id: 'won', label: 'Won' },
+  { id: 'completed', label: 'Completed' },
+  { id: 'delivered', label: 'Delivered' },
+  { id: 'active', label: 'Active' },
   { id: 'lost', label: 'Lost' },
 ]
-
-// Social platforms
-export const PLATFORMS = {
-  linkedin: { label: 'LinkedIn', color: '#0A66C2' },
-  facebook: { label: 'Facebook', color: '#1877F2' },
-  instagram: { label: 'Instagram', color: '#E1306C' },
-  tiktok: { label: 'TikTok', color: '#000000' },
-  youtube: { label: 'YouTube', color: '#FF0000' },
-  wordpress: { label: 'WordPress Blog', color: '#21759B' },
-  gbp: { label: 'Google Business', color: '#4285F4' },
-}
