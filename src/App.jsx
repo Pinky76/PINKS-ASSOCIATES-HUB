@@ -4,13 +4,17 @@ import Layout from './components/Layout'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import CRMBoard from './pages/CRMBoard'
-import ContentHub from './pages/ContentHub'
-import ContentCalendar from './pages/ContentCalendar'
 import AllLeads from './pages/AllLeads'
+import Enquire from './pages/Enquire'
 
 function AppInner() {
   const { user, loading } = useAuth()
   const [activePage, setActivePage] = useState('dashboard')
+
+  // Public enquiry form — no login required
+  if (window.location.pathname === '/enquire') {
+    return <Enquire />
+  }
 
   if (loading) {
     return (
@@ -29,8 +33,6 @@ function AppInner() {
   const pages = {
     dashboard: <Dashboard setActivePage={setActivePage} />,
     crm: <CRMBoard />,
-    content: <ContentHub />,
-    calendar: <ContentCalendar setActivePage={setActivePage} />,
     leads: <AllLeads setActivePage={setActivePage} />,
   }
 
